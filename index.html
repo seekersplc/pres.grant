@@ -229,6 +229,33 @@ animation-iteration-count: 1;
             text-align: center;
             padding: 20px 0;
         }
+	  }
+.animated-text {
+    font-size: 2rem;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s ease-out forwards, blink 1s step-start infinite;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
     </style>
 <script async src='/cdn-cgi/challenge-platform/h/g/scripts/invisible.js'></script><meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
